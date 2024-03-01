@@ -1,47 +1,100 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo Bueno</title>
-    <link rel="stylesheet" href="css/estilo.css">
-</head>
-<body>
-    <header>
-        <h1>Restaurante Todo Bueno</h1> <br>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./menu.html">Menú</a></li>
-                <li><a href="./reserva.html">Reservas</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="utils/style.css" />
+    <script src="utils/script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Sistema de gestión de trabajadores</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="text-center m-5">Sistema de gestión de trabajadores</h1>
 
-    <section id="inicio">
-        <h2>Bienvenido a Restaurante TodoBueno</h2>
-        <p>Descubre una experiencia gastronómica única en nuestro acogedor restaurante.</p>
-    </section>
-    <section id="menu">
-        <h2>Te presentamos el menu más sabroso de la ciudad</h2>
-        <a href="menu.html"><button>Nuestro menú</button></a>
-    </section>
-    <section id="donde">
-        <div id="card-content">
-            <img id="img1" src="img/lugar1.jpg">
-            <div class="text-content">
-                <h1>Donde estamos</h1>
-                <p>Disfruta de unas maravillosas vistas a una pantalla con el Coliseo Romano y elige el momento del día.</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17152.832542186647!2d-3.648297749504482!3d40.53670519086391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422cf2fd5b9967%3A0xd2005721bf861e1d!2sAlcobendas%2C%20Madrid!5e0!3m2!1ses!2ses!4v1701365701362!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+      <div class="row">
+        <div class="container col-8 mb-4">
+          <h2 class="mb-1" id="title2">Formulario de datos</h2>
+          <div class="formulario">
+            <label>Nombre:</label>
+            <input id="inputNombre" type="text" class="form-control mb-3" />
+            <label>Apellidos:</label>
+            <input id="inputApellidos" type="text" class="form-control mb-3" />
+            <label>Correo:</label>
+            <input id="inputCorreo" type="text" class="form-control mb-3" />
+            <label>Departamento:</label>
+            <select class="form-select" id="selectDepartamento">
+              <option value="IT">IT</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Ventas">Ventas</option>
+              <option value="Administracion">Administracion</option>
+            </select>
+            <button id="guardarDatos" class="btn btn-primary mt-4">
+              Guardar datos
+            </button>
+          </div>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Restaurante Todo Bueno. Todos los derechos reservados.</p>
-    </footer>
-</body>
+        <div class="container col-4">
+          <h2>Listado de datos</h2>
+          <div class="container">
+            <li id="listaUsuarios" class="list-group"></li>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Resumen</h3>
+        <div class="row container">
+          <div class="col">
+            <h4>IT</h4>
+            <div class="tarjeta">
+              <h5>Numero de empleados:</h5>
+              <p id="contadorIT" class="mb-4">0</p>
+              <li id="listaUsuariosIT" class="list-group"></li>
+            </div>
+          </div>
+          <div class="col">
+            <h4>Marketing</h4>
+            <div class="tarjeta">
+              <h5>Numero de empleados:</h5>
+              <p id="contadorMarketing">0</p>
+              <li id="listaUsuariosMarketing" class="list-group"></li>
+            </div>
+          </div>
+          <div class="col">
+            <h4>Ventas</h4>
+            <div class="tarjeta">
+              <h5>Numero de empleados:</h5>
+              <p id="contadorVentas">0</p>
+              <li id="listaUsuariosVentas" class="list-group"></li>
+            </div>
+          </div>
+          <div class="col">
+            <h4>Administracion</h4>
+            <div class="tarjeta">
+              <h5>Numero de empleados:</h5>
+              <p id="contadorAdministracion">0</p>
+              <li id="listaUsuariosAdministracion" class="list-group"></li>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br />
+    </main>
+  </body>
 </html>
-
-

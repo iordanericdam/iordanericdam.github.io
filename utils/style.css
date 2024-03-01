@@ -1,0 +1,47 @@
+body {
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+h3,
+h4 {
+  text-align: center;
+}
+
+.parrafos {
+  color: rgb(0, 0, 0);
+}
+
+.tarjeta {
+  border: 1px solid #e08c8c;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.tarjeta h5 {
+  display: inline;
+  margin-right: 5px;
+}
+
+.tarjeta p {
+  display: inline;
+  margin: 0;
+}
+
+.formulario {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formulario button {
+  background-color: rgb(58, 182, 58);
+  border-color: rgb(58, 182, 58);
+  margin-left: 35%;
+}
+
+#title2 {
+  margin: auto;
+  max-width: 500px;
+}
