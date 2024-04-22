@@ -1,47 +1,27 @@
-body {
-  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+.divGenerico {
+  margin-top: 3%;
+  margin-right: 2%;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px grey;
 }
 
-h3,
-h4 {
-  text-align: center;
+.form-select{
+ display: inline;
+ width: 20%;
 }
 
-.parrafos {
-  color: rgb(0, 0, 0);
+.contador{
+  display: inline-flex;
+  margin-left: 60px;
 }
 
-.tarjeta {
-  border: 1px solid #e08c8c;
-  border-radius: 4px;
-  padding: 15px;
+.menos, 
+.mas{
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.tarjeta h5 {
-  display: inline;
-  margin-right: 5px;
-}
 
-.tarjeta p {
-  display: inline;
-  margin: 0;
-}
 
-.formulario {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.formulario button {
-  background-color: rgb(58, 182, 58);
-  border-color: rgb(58, 182, 58);
-  margin-left: 35%;
-}
-
-#title2 {
-  margin: auto;
-  max-width: 500px;
-}
